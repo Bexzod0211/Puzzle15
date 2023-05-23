@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Puzzle15" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/color_game</item>
+        <item name="colorPrimaryVariant">@color/color_game</item>
+        <item name="colorOnPrimary">@color/color_game</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/color_game</item>
+        <item name="colorSecondaryVariant">@color/color_game</item>
+        <item name="colorOnSecondary">@color/color_game</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>

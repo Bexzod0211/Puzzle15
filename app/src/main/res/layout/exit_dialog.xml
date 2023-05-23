@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_info_exit"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="26sp"
+        android:textColor="#177477"
+        android:text="Do you want to\nclose the app?"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold"
+
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp">
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_Yes"
+            android:layout_width="90dp"
+            android:layout_height="45dp"
+            android:background="@drawable/shape_pos_button"
+            android:text="Yes"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_marginEnd="20dp"
+            android:foreground="?selectableItemBackground"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_No"
+            android:layout_width="90dp"
+            android:layout_height="45dp"
+            android:background="@drawable/shape_neg_button"
+            android:text="No"
+            android:textColor="@color/white"
+            android:foreground="?selectableItemBackground"
+            android:layout_marginStart="20dp"
+            android:textSize="16sp"
+            />
+    </LinearLayout>
+</LinearLayout>

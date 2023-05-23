@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_image"
+    tools:context=".ui.MainActivity">
+    <!--<com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="#06102A">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_back"
+                android:layout_gravity="center|start"
+                android:padding="8dp"
+                android:layout_marginStart="16dp"
+                />
+        </FrameLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>-->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?actionBarSize"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_moves"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_weight="0.8"
+                android:background="@drawable/db_cell_wrong"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Moves :  0"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_weight="1.1"
+                android:background="@drawable/db_cell_wrong"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/txttime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingStart="10dp"
+                    android:text="Time"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <Chronometer
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.1"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:layout_marginEnd="50dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/img_restart"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/shuffle_draw"
+                android:padding="15dp"
+                android:src="@drawable/restart" />
+
+            <ImageView
+                android:id="@+id/img_sound"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/shuffle_draw"
+                android:padding="15dp"
+                android:src="@drawable/ic_music_on" />
+
+            <ImageView
+                android:id="@+id/img_home"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="top"
+                android:background="@drawable/shuffle_draw"
+                android:padding="15dp"
+                android:src="@drawable/ic_home" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/table"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#061463"
+        android:padding="15dp">
+        <!--        android:background="#152837">-->
+        <TextView
+            android:id="@+id/txt_1"
+            style="@style/style_cell"
+            app:layout_constraintBottom_toTopOf="@id/txt_5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/txt_2"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="1" />
+
+        <TextView
+            android:id="@+id/txt_2"
+            style="@style/style_cell"
+            app:layout_constraintBottom_toTopOf="@id/txt_6"
+            app:layout_constraintLeft_toRightOf="@id/txt_1"
+            app:layout_constraintRight_toLeftOf="@id/txt_3"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="2" />
+
+        <TextView
+            android:id="@+id/txt_3"
+            style="@style/style_cell"
+            app:layout_constraintBottom_toTopOf="@id/txt_7"
+            app:layout_constraintLeft_toRightOf="@id/txt_2"
+            app:layout_constraintRight_toLeftOf="@id/txt_4"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="3" />
+
+        <TextView
+            android:id="@+id/txt_4"
+            style="@style/style_cell"
+            app:layout_constraintBottom_toTopOf="@id/txt_8"
+            app:layout_constraintLeft_toRightOf="@id/txt_3"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="4" />
+
+        <TextView
+            android:id="@+id/txt_5"
+            style="@style/style_cell"
+            app:layout_constraintBottom_toTopOf="@id/txt_9"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/txt_6"
+            app:layout_constraintTop_toBottomOf="@id/txt_1"
+            tools:text="5" />
+
+        <TextView
+            android:id="@+id/txt_6"
+            style="@style/style_cell"
+            app:layout_constraintBottom_toTopOf="@id/txt_10"
+            app:layout_constraintLeft_toRightOf="@id/txt_5"
+            app:layout_constraintRight_toLeftOf="@id/txt_7"
+            app:layout_constraintTop_toBottomOf="@id/txt_2"
+            tools:text="6" />
+
+        <TextView
+            android:id="@+id/txt_7"
+            style="@style/style_cell"
+            app:layout_constraintBottom_toTopOf="@id/txt_11"
+            app:layout_constraintLeft_toRightOf="@id/txt_6"
+            app:layout_constraintRight_toLeftOf="@id/txt_8"
+            app:layout_constraintTop_toBottomOf="@id/txt_3"
+            tools:text="7" />
+
+        <TextView
+            android:id="@+id/txt_8"
+            style="@style/style_cell"
+            app:layout_constraintBottom_toTopOf="@id/txt_12"
+            app:layout_constraintLeft_toRightOf="@id/txt_7"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_4"
+            tools:text="8" />
+
+        <TextView
+            android:id="@+id/txt_9"
+            style="@style/style_cell"
+            app:layout_constraintBottom_toTopOf="@id/txt_13"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/txt_10"
+            app:layout_constraintTop_toBottomOf="@id/txt_5"
+            tools:text="9" />
+
+        <TextView
+            android:id="@+id/txt_10"
+            style="@style/style_cell"
+            app:layout_constraintBottom_toTopOf="@id/txt_14"
+            app:layout_constraintLeft_toRightOf="@id/txt_9"
+            app:layout_constraintRight_toLeftOf="@id/txt_11"
+            app:layout_constraintTop_toBottomOf="@id/txt_6"
+            tools:text="10" />
+
+        <TextView
+            android:id="@+id/txt_11"
+            style="@style/style_cell"
+            app:layout_constraintBottom_toTopOf="@id/txt_15"
+            app:layout_constraintLeft_toRightOf="@id/txt_10"
+            app:layout_constraintRight_toLeftOf="@id/txt_12"
+            app:layout_constraintTop_toBottomOf="@id/txt_7"
+            tools:text="11" />
+
+        <TextView
+            android:id="@+id/txt_12"
+            style="@style/style_cell"
+            app:layout_constraintBottom_toTopOf="@id/txt_16"
+            app:layout_constraintLeft_toRightOf="@id/txt_11"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_8"
+            tools:text="12" />
+
+        <TextView
+            android:id="@+id/txt_13"
+            style="@style/style_cell"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/txt_14"
+            app:layout_constraintTop_toBottomOf="@id/txt_9"
+            tools:text="13" />
+
+        <TextView
+            android:id="@+id/txt_14"
+            style="@style/style_cell"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/txt_13"
+            app:layout_constraintRight_toLeftOf="@id/txt_15"
+            app:layout_constraintTop_toBottomOf="@id/txt_10"
+            tools:text="14" />
+
+        <TextView
+            android:id="@+id/txt_15"
+            style="@style/style_cell"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/txt_14"
+            app:layout_constraintRight_toLeftOf="@id/txt_16"
+            app:layout_constraintTop_toBottomOf="@id/txt_11"
+            tools:text="15" />
+
+        <TextView
+            android:id="@+id/txt_16"
+            style="@style/style_cell"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/txt_15"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_12"
+            tools:text="16" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>
